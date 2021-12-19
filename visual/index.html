@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 7 - Movies Scatterplot</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="main">
+      <div>
+        <label for="xSelect">X-Axis: </label>
+        <select class="custom-select" id="xSelect" onchange="onCategoryChanged()">
+          <option value="duration">Duration</option>
+          <option value="aspect-ratio">Aspect Ratio</option>
+          <option value="imdb-score">IMDb Score</option>
+          <option selected value="budget">Budget</option>
+          <option value="gross">Gross</option>
+          <option value="number-of-users-for-reviews">Number of Users for Reviews</option>
+          <option value="number-of-faces-in-poster">Number of Faces in Poster</option>
+          <option value="number-of-voted-users">Number of Voted Users</option>
+        </select>
+        <label for="ySelect">Y-Axis: </label>
+        <select class="custom-select" id="ySelect" onchange="onCategoryChanged()">
+          <option value="duration">Duration</option>
+          <option value="aspect-ratio">Aspect Ratio</option>
+          <option value="imdb-score">IMDb Score</option>
+          <option value="budget">Budget</option>
+          <option selected value="gross">Gross</option>
+          <option value="number-of-users-for-reviews">Number of Users for Reviews</option>
+          <option value="number-of-faces-in-poster">Number of Faces in Poster</option>
+          <option value="number-of-voted-users">Number of Voted Users</option>
+        </select>
+        <label for="yearSelect">Year Filter: </label>
+        <select class="custom-select" id="yearSelect" onchange="onCategoryChanged()">
+          <option selected value="all">All</option>
+          <option value="year-2010">2010</option>
+          <option value="year-2011">2011</option>
+          <option value="year-2012">2012</option>
+          <option value="year-2013">2013</option>
+          <option value="year-2014">2014</option>
+          <option value="year-2015">2015</option>
+          <option value="year-2016">2016</option>
+        </select>
+    </div>
+        <svg id = "svg1" width="1200" height="720">
+        </svg>
+        <!-- <svg id = "barchart" width="600" height="400">
+        </svg> -->
+        <div id="barchart"></div>
+    </div>
+</body>
+<script src="//d3js.org/d3.v5.min.js"></script>
+<script src="./d3-tip.js"></script>
+<script src="./main.js"></script>
+</html>
